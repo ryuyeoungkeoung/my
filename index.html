@@ -6,27 +6,36 @@
     <title>Document</title>
     <!-- css -->
     <link rel="stylesheet" href="./css/index.css" />
+    <!-- 스크롤 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- //cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
   </head>
   <body>
-    <header>
-      <div class="hearder_wrap">
-        <div class="icon"></div>
-        <nav>
-          <ul class="menu align-center expanded text-center SMN_effect-46">
-            <li><a href="#">HOME</a></li>
-            <li class="up_li"><a href="#">ABOUT ME</a></li>
-            <li><a href="#">CONTACT</a></li>
-            <li class="up_li"><a href="#">WORK</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <script>
+      AOS.init();
+    </script>
+    <!-- 커서 -->
+    <div id="cursorBlob"></div>
     <!-- 메인 -->
     <main>
+      <header>
+        <div class="hearder_wrap">
+          <div class="icon"></div>
+          <nav>
+            <ul class="menu align-center expanded text-center SMN_effect-46">
+              <li><a href="#">HOME</a></li>
+              <li class="up_li"><a href="#">ABOUT ME</a></li>
+              <li><a href="#">CONTACT</a></li>
+              <li class="up_li"><a href="#">WORK</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
       <section class="fi visual">
         <h2 id="quote">
           The ships hung in the sky <br />
@@ -38,19 +47,54 @@
       <section class="two">
         <!-- 사진 -->
         <div class="wrap">
-          <div class="pro"></div>
+          <div class="pro">
+            <div class="pro_hov">
+              <h2>Ryuyeoungkeoung</h2>
+              <h2>2000.02.12</h2>
+            </div>
+          </div>
+
           <div class="txt_box">
-            <h2>
-              한계를 두지 않고 성장하는 퍼블리셔<br />
-              <span>류영경</span>이 되겠습니다.
-            </h2>
+            <h2>한계를 두지 않고 성장하는 퍼블리셔가 되겠습니다.</h2>
             <p>
-              단순히 콘텐츠를 제공하는 것을 넘어서, <br />
-              가치 있고 의미 있는 경험을 제공하기 위해<br />
+              단순히 콘텐츠를 제공하는 것을 넘어서, 가치 있고 의미 있는 경험을
+              제공하기 위해<br />
               미래 지향적으로 콘텐츠를 설계하고 기획하겠습니다.
             </p>
-            <p>
-              Javascript, Jquery, HTML, CSS, Figma, GTQ, GTQI, ITQ 등 <br />
+            <!-- 자격증 -->
+            <div class="pro_sub">
+              <div class="txt">
+                <div class="sub">MY HOBBY</div>
+                <h4>
+                  - 러닝모임 참가 <br />
+                  - 대인관계 쌓기
+                </h4>
+                <div class="txt">
+                  <div class="sub">MY CAREER</div>
+                  <h4>
+                    - 광고 기획, 제안서 작성 수료<br />
+                    - 2D, faker3D 모션그래픽 과정 수료 <br />
+                    - UIUX반응형 웹디자인 <br />& 웹퍼블리셔 양성과정 수료<br />
+                  </h4>
+                </div>
+              </div>
+              <!-- 자격증2 -->
+              <div class="txt">
+                <div class="sub">MY EDUCATION</div>
+                <h4>
+                  - 근명여자정보고등학교 졸업 <br />
+                  - 협성대학교 미디어영상광고학과 졸업
+                </h4>
+                <div class="txt">
+                  <div class="sub">MY LICENSE</div>
+                  <h4>
+                    - GTQ1급 <br />
+                    - ITQ 자격증 보유
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <!-- Javascript, Jquery, HTML, CSS, Figma, GTQ, GTQI, ITQ 등 <br />
               매 순간 새로운 도전을 향할 수 있어 기쁩니다. 이러한 마음 가짐을
               가져 독창적이고, 나만이 할 수 있는 재밌는 시각적 아이덴티티를
               제공하겠습니다. <br />
@@ -61,22 +105,100 @@
               중시합니다. <br />
               <br />
               계속해서 성장해나아가 추가에 추가를 할 수 있는 웹퍼블리셔가
-              되겠습니다.
-            </p>
+              되겠습니다. -->
           </div>
         </div>
       </section>
-      <!-- 세번째 섹션 스킬트리 -->
+      <!-- 세번째 섹션 링크 -->
       <section class="skill">
         <div class="skill_wrap">
-          <h2>Skill Tree</h2>
           <div>
             <a href="#"><span>Github</span></a>
             <a href="#"><span>Vecel</span></a>
             <a href="#"><span>Blog</span></a>
             <a href="#"><span>Youtube</span></a>
-            <!-- <a href="#"><span>Dribbble</span></a>
-            <a href="#"><span>CodePen</span></a> -->
+          </div>
+        </div>
+      </section>
+      <!-- 네번쨰 섹션 스킬 스티키 -->
+      <section class="four">
+        <h4>Skill Tree</h4>
+        <!-- 컨텐츠 영역 -->
+        <div class="tree">
+          <!-- itq Tools -->
+          <div class="html_1 ITQ" data-aos="fade-up" data-aos-duration="2000">
+            <h3>ITQ</h3>
+            <p>
+              마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을
+              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다. <br />
+              SEO_검색엔진 최적화를 통해 상위 노출하는 법을 배웠습니다.
+            </p>
+          </div>
+          <!-- Design Tools -->
+          <div class="html_1 Pigma" data-aos="fade-up" data-aos-duration="2000">
+            <h3>PS, AI, Pigma</h3>
+            <p>
+              마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을
+              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다. <br />
+              SEO_검색엔진 최적화를 통해 상위 노출하는 법을 배웠습니다.
+            </p>
+          </div>
+          <!-- premiere pro After effect -->
+          <div
+            class="html_1 effect"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <h3>premiere pro, After effect</h3>
+            <p>
+              마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을
+              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다. <br />
+              SEO_검색엔진 최적화를 통해 상위 노출하는 법을 배웠습니다.
+            </p>
+          </div>
+          <!-- html -->
+          <div class="html_1" data-aos="fade-up" data-aos-duration="2000">
+            <h3>HTML</h3>
+            <p>
+              마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을
+              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다. <br />
+              SEO_검색엔진 최적화를 통해 상위 노출하는 법을 배웠습니다.
+            </p>
+          </div>
+          <!-- css -->
+          <div class="html_1" data-aos="fade-up" data-aos-duration="2000">
+            <h3>CSS</h3>
+            <p>
+              마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을
+              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다. <br />
+              SEO_검색엔진 최적화를 통해 상위 노출하는 법을 배웠습니다.
+            </p>
+          </div>
+          <!-- Javascript -->
+          <div
+            class="html_1 Javascript"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <h3>Javascript</h3>
+            <p>
+              마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을
+              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다. <br />
+              SEO_검색엔진 최적화를 통해 상위 노출하는 법을 배웠습니다.
+            </p>
+          </div>
+          <!-- Jquery -->
+          <div
+            class="html_1 Jquery"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <h3>Jquery</h3>
+            <p>
+              마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을
+              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다. <br />
+              SEO_검색엔진 최적화를 통해 상위 노출하는 법을 배웠습니다.
+            </p>
           </div>
         </div>
       </section>
@@ -110,7 +232,7 @@
               <ul class="me_box">
                 <li>
                   <h4>기술스택</h4>
-                  <p>HTML, SCSS, Javascript, Jquery</p>
+                  <p>HTML, CSS, Javascript, Jquery</p>
                 </li>
                 <li>
                   <h4>기여도</h4>

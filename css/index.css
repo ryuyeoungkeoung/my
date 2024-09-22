@@ -14,6 +14,82 @@
 @import url("https://fonts.googleapis.com/css?family=Black+Han+Sans:400");
 
 /* 커서 */
+#cursorBlob {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(
+    120deg,
+    #ff1744,
+    #e040fb,
+    #2979ff,
+    #00e5ff,
+    #76ff03
+  );
+  background-size: 1600% 1600%;
+  position: absolute;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 1;
+  transition: 0.3s linear;
+  animation: blobRadius 5s ease infinite, blobBackground 15s ease infinite;
+}
+
+@keyframes blobRadius {
+  0%,
+  100% {
+    border-radius: 43% 77% 80% 40%/40% 40% 80% 80%;
+  }
+  20% {
+    border-radius: 47% 73% 61% 59%/47% 75% 45% 73%;
+  }
+  40% {
+    border-radius: 46% 74% 74% 46%/74% 58% 62% 46%;
+  }
+  60% {
+    border-radius: 47% 73% 61% 59%/40% 40% 80% 80%;
+  }
+  80% {
+    border-radius: 50% 70% 52% 68%/51% 61% 59% 69%;
+  }
+}
+@keyframes blobBackground {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #212121;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.nav__link {
+  color: #fff;
+  list-style: none;
+  cursor: pointer;
+  font-size: 5vw;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.25s ease;
+}
+.nav__link:not(:last-child) {
+  margin-bottom: 50px;
+}
+.nav__link:hover {
+  transform: translateX(25px);
+}
 /* 헤더 */
 
 .SMN_effect-46 a {
@@ -105,6 +181,8 @@ header {
   width: 100%;
   height: 5%;
   background-color: #e241b2;
+  position: fixed;
+  z-index: 999;
 }
 .hearder_wrap {
   width: 90%;
@@ -161,6 +239,8 @@ nav ul li a {
   line-height: 1;
   margin: 4%;
   text-align: left;
+  margin-top: 10vw;
+  margin-bottom: 10vw;
 }
 
 #quote > * {
@@ -188,14 +268,50 @@ nav ul li a {
 }
 .pro {
   width: 30%;
-  height: 90%;
+  height: 77%;
+  position: relative;
   background-image: url(../img/picture.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  z-index: 9998;
+
   /* filter: brightness(10.5); */
 }
+.pro:hover {
+  transform: scale(1);
 
+  transition: 0.3s;
+}
+.pro:hover .pro_hov {
+  display: block;
+}
+.pro:hover .pro_hov {
+  display: none;
+  position: absolute;
+  bottom: 0%;
+  z-index: 9999;
+  width: 101%;
+  height: 10%;
+  background-color: #0002;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.3s;
+}
+.pro h2 {
+  display: none;
+}
+
+.pro:hover h2 {
+  transition: 0.3s;
+  display: block;
+  font-size: 1vw;
+  color: #ffffff;
+
+  /* text-align: center; */
+  font-weight: 500;
+}
 .txt_box {
   width: 63%;
   height: 90%;
@@ -222,13 +338,36 @@ nav ul li a {
   line-height: 28px;
   color: #ffffff;
 }
+/* 자격증 취미 학력 */
+.pro_sub {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+}
+.txt {
+  width: 100%;
+  margin-top: 6%;
+}
+.sub {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0px;
+  color: #686868;
+}
+.txt h4 {
+  color: aliceblue;
+  line-height: 34px;
+  font-size: 17px;
+  font-weight: 500;
+}
 /* 세번째 섹션 스킬트리*/
 .skill {
   width: 100%;
-  height: 70%;
+  height: 15%;
   display: flex;
   align-items: center;
   background-color: #121212;
+  padding: 100px 0px;
 }
 .skill_wrap {
   width: 90%;
@@ -240,7 +379,7 @@ nav ul li a {
   display: inline-block;
   position: absolute;
   top: 30%;
-  left: 57%;
+  left: 60%;
   width: 57%;
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -330,16 +469,64 @@ nav ul li a {
 .skill_wrap > div > a:nth-of-type(4):before {
   content: "\f113";
 }
-/* .skill_wrap > div > a:nth-of-type(5):before {
-  content: "\f17d";
+/* 네번쨰 섹션 스킬 스티키 */
+.four {
+  height: 280%;
+  background-color: #121212;
 }
-.skill_wrap > div > a:nth-of-type(6):before {
-  content: "\f1cb";
-} */
+.four h4 {
+  font-size: 4vw;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #121212;
+  padding: 2vw 0vw;
+  border-top: 1px dotted;
+  margin-bottom: 20px;
+}
+.tree {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
 
-/*  */
-
-/*  */
+.html_1 {
+  width: 72%;
+  gap: 20px;
+  margin: 0 auto;
+  height: 11%;
+  display: flex;
+  border-radius: 54px;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: rgb(249, 249, 249);
+  padding: 40px;
+  justify-content: space-around;
+  background-color: #99999922;
+  border: 1px solid #fff;
+  /* display: none; */
+  box-shadow: 3px 3px 0 3px #ffffff;
+  transition: 0.3s;
+}
+/* 그림자 변형 */
+.html_1:hover {
+  box-shadow: -9px 9px 0 -5px #ffffff;
+}
+.tree h3 {
+  font-size: xxx-large;
+  font-weight: 700;
+  color: #e9e9e9;
+}
+.tree P {
+  font-size: 1vw;
+  font-weight: 700;
+  color: #5f5f5f;
+  line-height: 30px;
+}
 /* 색 끊어주는 섹션 */
 .mid {
   width: 100%;
@@ -361,8 +548,8 @@ nav ul li a {
   border-top: 1px dotted #000000;
 }
 .mid_main {
-  font-size: 48px;
   font-weight: 400;
+  font-size: 3vw;
 }
 /* 네번째 섹션 포폴 영역*/
 .for {
@@ -374,7 +561,7 @@ nav ul li a {
   width: 95%;
   box-sizing: border-box;
   gap: 15px;
-  height: 750px;
+  height: 19%;
   margin: 0 auto;
   display: flex;
   left: 2%;
@@ -392,27 +579,25 @@ nav ul li a {
 }
 
 .di_1 {
-  top: -16px;
+  top: 0%;
 }
 .di_2 .for_txt {
   margin-bottom: 60px;
 }
 .di_2 {
-  top: 150px;
+  top: 18%;
 }
 
 .di_3 {
-  top: 315px;
+  top: 31%;
 }
 .di_3 .for_txt {
   margin-bottom: 60px;
 }
 .di_4 {
-  top: 464px;
+  top: 44%;
 }
-.di_4 .for_txt {
-  margin-top: 46px;
-}
+
 /* 텍스트 박스 제목라인 */
 .for div > h2 {
   font-size: 18px;
@@ -438,7 +623,7 @@ nav ul li a {
 .tit_box h3 {
   width: fit-content;
   height: fit-content;
-  font-size: 50px;
+  font-size: 3vw;
   color: #121212;
   font-weight: 600;
 }
