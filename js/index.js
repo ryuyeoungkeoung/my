@@ -1,5 +1,6 @@
 "use strict";
-//커서 태그들
+gsap.registerPlugin(ScrollTrigger);
+//커서
 const blobCursor = (() => {
   const cursor = document.querySelector("#cursorBlob");
   const links = document.querySelectorAll(".nav__link");
@@ -18,6 +19,61 @@ const blobCursor = (() => {
   );
 })();
 
+// 메뉴 클릭시 섹션 이동
+document.querySelectorAll(".menu-link").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault(); // 기본 링크 클릭 동작 방지
+
+    const targetClass = this.getAttribute("href"); // 클릭한 링크의 href 속성 가져오기
+    const targetElement = document.querySelector(targetClass); // 해당 섹션 요소 선택
+
+    targetElement.scrollIntoView({
+      behavior: "smooth", // 부드러운 스크롤 효과
+      block: "start", // 섹션의 시작 부분으로 정렬
+    });
+  });
+});
+
+// 메인
+var typed = new Typed(".typingTxt", {
+  strings: [
+    "<i>Converting innovative</i> ideas.",
+    " into seamless digital experiences.",
+  ],
+  typeSpeed: 80, //타이핑속도
+  backSpeed: 30, //백스페이스 속도
+  smartBackspace: true,
+  cursorChar: "|", //커서모양
+  backDelay: 1000, //백스페이스 문자 지우기 전에 딜레이
+});
+
+// 메인
+ScrollTrigger.matchMedia({
+  // 1000px 이상일 때
+  "(min-width: 1000px)": function () {
+    gsap.from(".fi", {
+      scrollTrigger: {
+        trigger: ".two",
+        start: "-100% -50%",
+        end: "0% 0%",
+        scrub: 1,
+        // markers: true,
+      },
+      duration: 1,
+    });
+
+    gsap.to(".fi", {
+      scrollTrigger: {
+        trigger: "body",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1,
+        // markers: true,
+      },
+      borderRadius: "100%",
+    });
+  },
+});
 // 프로플 사진
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.matchMedia({
@@ -48,73 +104,66 @@ ScrollTrigger.matchMedia({
     });
   },
 });
+// 마지막 섹션 1
+document.addEventListener("DOMContentLoaded", () => {
+  const text = "Thanks for the opportunity!";
+  const container = document.getElementById("animatedText");
 
-// 스크롤 트리거 헤더2,4
-ScrollTrigger.matchMedia({
-  // 1000px 이상일 때
-  "(min-width: 1000px)": function () {
-    gsap.from(".up_li", {
-      scrollTrigger: {
-        duration: 100,
-        trigger: "body",
-        start: "0% 0%",
-        end: "0% 0%",
-        scrub: 1,
-        // markers: true,
-      },
-      y: "0%",
+  // Create spans for each letter
+  text.split("").forEach((char) => {
+    const span = document.createElement("span");
+    span.className = "letter";
+    span.innerHTML = char === " " ? "&nbsp;" : char; // Use &nbsp; for spaces
+    container.appendChild(span);
+  });
+
+  const letters = document.querySelectorAll(".letter");
+  const totalLetters = letters.length;
+  const delayIncrement = 100; // Delay in milliseconds
+
+  function easeInOutQuart(t) {
+    return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * --t * t * t * t;
+  }
+
+  function animateLetters(forward = true) {
+    letters.forEach((letter, index) => {
+      // const delay = Math.max(index, totalLetters - index) * delayIncrement;
+
+      const normalizedIndex =
+        Math.max(index, totalLetters - 1 - index) / (totalLetters - 1);
+      const easedDelay = easeInOutQuart(normalizedIndex);
+      const delay = easedDelay * (totalLetters - 1) * delayIncrement;
+
+      setTimeout(() => {
+        letter.style.setProperty("--wght", forward ? 700 : 100);
+        letter.style.setProperty("--wdth", forward ? 400 : 150);
+        letter.style.setProperty("--opacity", forward ? 1 : 0.25);
+        letter.style.setProperty(
+          "--letter-spacing",
+          forward ? "0.05em" : "0em"
+        );
+        // letter.style.setProperty("--font-size", forward ? '12vw' : '10vw');
+      }, delay);
     });
-    gsap.to(".up_li", {
-      scrollTrigger: {
-        trigger: "body",
-        // markers: true,
-      },
-      y: "200%",
-    });
-  },
+
+    setTimeout(() => animateLetters(!forward), 4000);
+  }
+
+  animateLetters();
 });
 
-// 스킬트리
-// 스크롤 트리거
-ScrollTrigger.matchMedia({
-  // 1000px 이상일 때
-  "(min-width: 1000px)": function () {
-    gsap.from(".Pigma", {
-      scrollTrigger: {
-        duration: 100,
-        trigger: "body",
-        start: "0% 0%",
-        end: "0% 0%",
-        scrub: 1,
+// 마지막섹션2 블러처리
+const section = document.querySelector(".fiv"); // .fiv 클래스를 가진 요소 선택
 
-        // markers: true,
-      },
-      y: "0%",
-    });
-    gsap.to(".Pigma", {
-      scrollTrigger: {
-        trigger: "four",
-        display: block,
-        // markers: true,
-      },
-      y: "0%",
-    });
-  },
-});
+function checkScroll() {
+  const rect = section.getBoundingClientRect(); // 해당 섹션의 위치 가져오기
 
-// 메인 (위로 올라가면 사진+ 헤더부분이 적용안 됨)
-var tl = gsap.timeline(),
-  split = new SplitText("#quote", { type: "words,chars" }),
-  words = split.words; //an array of all the divs that wrap each character
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    section.classList.remove("filter"); // 필터 해제
+  } else {
+    section.classList.add("filter"); // 필터 적용
+  }
+}
 
-tl.to(words, {
-  duration: 7,
-  "--weight": "300",
-  ease: "power3.out",
-  color: "hsl(+=0, +=70%, +=20%)",
-  stagger: {
-    each: 0.1,
-  },
-});
-
-// 마지막
+window.addEventListener("scroll", checkScroll); // 스크롤 시 체크
+window.addEventListener("resize", checkScroll); // 창 크기 변경 시 체크

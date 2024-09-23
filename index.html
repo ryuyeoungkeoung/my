@@ -14,6 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <!-- 글자 -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   </head>
   <body>
     <script>
@@ -21,27 +23,34 @@
     </script>
     <!-- 커서 -->
     <div id="cursorBlob"></div>
+    <!-- 헤더 -->
+    <header>
+      <div class="hearder_wrap">
+        <div class="icon"></div>
+        <nav>
+          <ul class="head_menu">
+            <li><a href=".fi" class="menu-link">HOME</a></li>
+            <li class="up_li">
+              <a href=".two" class="menu-link">ABOUT ME</a>
+            </li>
+            <li><a href=".mid" class="menu-link">WORK</a></li>
+            <li class="up_li">
+              <a href=".fiv" class="menu-link">CONTACT </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <!-- 메인 -->
     <main>
-      <header>
-        <div class="hearder_wrap">
-          <div class="icon"></div>
-          <nav>
-            <ul class="menu align-center expanded text-center SMN_effect-46">
-              <li><a href="#">HOME</a></li>
-              <li class="up_li"><a href="#">ABOUT ME</a></li>
-              <li><a href="#">CONTACT</a></li>
-              <li class="up_li"><a href="#">WORK</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <section class="fi visual">
-        <h2 id="quote">
-          The ships hung in the sky <br />
-          much in the same way hat bricks don't.<br />
-        </h2>
-      </section>
+      <div class="animation_holder">
+        <section class="fi visual">
+          <div class="typingTxt">
+            Turning innovative concepts into<br />
+            functional code and dynamic applications.
+          </div>
+        </section>
+      </div>
 
       <!-- 자기소개 -->
       <section class="two">
@@ -55,7 +64,7 @@
           </div>
 
           <div class="txt_box">
-            <h2>한계를 두지 않고 성장하는 퍼블리셔가 되겠습니다.</h2>
+            <h2>한계를 두지 않고, 성장하는 퍼블리셔가 되겠습니다.</h2>
             <p>
               단순히 콘텐츠를 제공하는 것을 넘어서, 가치 있고 의미 있는 경험을
               제공하기 위해<br />
@@ -66,13 +75,13 @@
               <div class="txt">
                 <div class="sub">MY HOBBY</div>
                 <h4>
-                  - 러닝모임 참가 <br />
-                  - 대인관계 쌓기
+                  - 학습 공동체에 참여하기 <br />
+                  - 상호 관계 구축
                 </h4>
                 <div class="txt">
                   <div class="sub">MY CAREER</div>
                   <h4>
-                    - 광고 기획, 제안서 작성 수료<br />
+                    - 광고 기획, 제안서 작성 과정 수료<br />
                     - 2D, faker3D 모션그래픽 과정 수료 <br />
                     - UIUX반응형 웹디자인 <br />& 웹퍼블리셔 양성과정 수료<br />
                   </h4>
@@ -91,6 +100,12 @@
                     - GTQ1급 <br />
                     - ITQ 자격증 보유
                   </h4>
+                </div>
+                <div class="txt">
+                  <div class="sub">Email:</div>
+                  <a href="mailto:tb@basborn.studio" target="_blank"
+                    >yok1812@naver.com</a
+                  >
                 </div>
               </div>
             </div>
@@ -113,10 +128,14 @@
       <section class="skill">
         <div class="skill_wrap">
           <div>
-            <a href="#"><span>Github</span></a>
-            <a href="#"><span>Vecel</span></a>
-            <a href="#"><span>Blog</span></a>
-            <a href="#"><span>Youtube</span></a>
+            <a href="https://github.com/ryuyeoungkeoung"><span>Github</span></a>
+            <a href="https://vercel.com/ryu-yeoung-keoungs-projects"
+              ><span>Vecel</span></a
+            >
+            <a href="https://velog.io/@yok1812/posts"><span>Blog</span></a>
+            <a href="https://www.youtube.com/@%EC%81%98%EB%9D%A0%EA%B2%BD-r9n"
+              ><span>Youtube</span></a
+            >
           </div>
         </div>
       </section>
@@ -126,77 +145,72 @@
         <!-- 컨텐츠 영역 -->
         <div class="tree">
           <!-- itq Tools -->
-          <div class="html_1 ITQ" data-aos="fade-up" data-aos-duration="2000">
+          <div class="tree_sub" data-aos="fade-up" data-aos-duration="2000">
             <h3>ITQ</h3>
             <p>
               마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을
-              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다. <br />
+              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다.
+              <br />
               SEO_검색엔진 최적화를 통해 상위 노출하는 법을 배웠습니다.
             </p>
           </div>
           <!-- Design Tools -->
-          <div class="html_1 Pigma" data-aos="fade-up" data-aos-duration="2000">
-            <h3>PS, AI, Pigma</h3>
+          <div class="tree_sub" data-aos="fade-up" data-aos-duration="2000">
+            <h3>PS, AI, figma</h3>
             <p>
               마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을
-              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다. <br />
+              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다.
+              <br />
               SEO_검색엔진 최적화를 통해 상위 노출하는 법을 배웠습니다.
             </p>
           </div>
           <!-- premiere pro After effect -->
-          <div
-            class="html_1 effect"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
+          <div class="tree_sub" data-aos="fade-up" data-aos-duration="2000">
             <h3>premiere pro, After effect</h3>
             <p>
               마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을
-              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다. <br />
+              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다.
+              <br />
               SEO_검색엔진 최적화를 통해 상위 노출하는 법을 배웠습니다.
             </p>
           </div>
           <!-- html -->
-          <div class="html_1" data-aos="fade-up" data-aos-duration="2000">
+          <div class="tree_sub" data-aos="fade-up" data-aos-duration="2000">
             <h3>HTML</h3>
             <p>
               마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을
-              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다. <br />
+              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다.
+              <br />
               SEO_검색엔진 최적화를 통해 상위 노출하는 법을 배웠습니다.
             </p>
           </div>
           <!-- css -->
-          <div class="html_1" data-aos="fade-up" data-aos-duration="2000">
+          <div class="tree_sub" data-aos="fade-up" data-aos-duration="2000">
             <h3>CSS</h3>
             <p>
               마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을
-              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다. <br />
+              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다.
+              <br />
               SEO_검색엔진 최적화를 통해 상위 노출하는 법을 배웠습니다.
             </p>
           </div>
           <!-- Javascript -->
-          <div
-            class="html_1 Javascript"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
+          <div class="tree_sub" data-aos="fade-up" data-aos-duration="2000">
             <h3>Javascript</h3>
             <p>
               마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을
-              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다. <br />
+              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다.
+              <br />
               SEO_검색엔진 최적화를 통해 상위 노출하는 법을 배웠습니다.
             </p>
           </div>
           <!-- Jquery -->
-          <div
-            class="html_1 Jquery"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
+          <div class="tree_sub" data-aos="fade-up" data-aos-duration="2000">
             <h3>Jquery</h3>
             <p>
               마크업 랭귀지를 준수하여 홈페이지를 구조적으로 작성하는 방법을
-              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다. <br />
+              배웠으며 웹표준과 웹접근성을 준수하여 완성 할 수 있습니다.
+              <br />
               SEO_검색엔진 최적화를 통해 상위 노출하는 법을 배웠습니다.
             </p>
           </div>
@@ -250,7 +264,7 @@
               </ul>
             </div>
             <!-- 링크 버튼 -->
-            <a href="#" class="btn">VIEW</a>
+            <a href="https://tore-s.vercel.app/" class="btn">VIEW</a>
           </div>
           <!-- 포폴 이미지영역 -->
           <div class="pic_box pic_img1"></div>
@@ -292,7 +306,7 @@
               </ul>
             </div>
             <!-- 링크 버튼 -->
-            <a href="#" class="btn">VIEW</a>
+            <a href="https://nike-base.vercel.app/" class="btn">VIEW</a>
           </div>
           <!-- 포폴 이미지영역 -->
           <div class="pic_box pic_img2"></div>
@@ -335,7 +349,7 @@
               </ul>
             </div>
             <!-- 링크 버튼 -->
-            <a href="#" class="btn">VIEW</a>
+            <a href="https://appadding.vercel.app/" class="btn">VIEW</a>
           </div>
           <!-- 포폴 이미지영역 -->
           <div class="pic_box pic_img3"></div>
@@ -377,18 +391,35 @@
               </ul>
             </div>
             <!-- 링크 버튼 -->
-            <a href="#" class="btn">VIEW</a>
+            <a href="https://ilovepdf-clone-dun.vercel.app/" class="btn"
+              >VIEW</a
+            >
           </div>
           <!-- 포폴 이미지영역 -->
           <div class="pic_box pic_img4"></div>
         </div>
       </section>
-      <!-- 각오+ 효과 -->
-      <section class="fiv"></section>
-      <!-- 마지막 섹션 -->
+      <!-- 마지막 섹션-->
+      <section class="fiv">
+        <div class="animated-text" id="animatedText"></div>
+      </section>
     </main>
-    <!-- 풋터 -->
-    <footer></footer>
+    <!-- 풋터 (전화번호 카피라이트)-->
+    <footer>
+      <div class="hov_footer">
+        <div class="ph_copy">
+          <div class="cir">
+            <div class="ph_wrap">
+              <div class="ph_bg"></div>
+              <h4 cl>010-3743-2286</h4>
+            </div>
+            <div class="footer_last">
+              <h4 class="footer_copy">&copy;yeoungkeoung</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
   <!-- js -->
   <script src="./js/index.js"></script>
