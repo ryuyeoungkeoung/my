@@ -116,15 +116,24 @@
   }
 }
 @media screen and (max-width: 1000px) {
+  .wrap {
+    gap: 20px;
+  }
+  .pro {
+    background-size: 100%;
+  }
   .pro:hover h2 {
     font-size: 1.5vw;
+  }
+  .pro:hover .pro_hov {
+    bottom: 12%;
   }
 
   .txt_box h2 {
     font-size: 27px;
   }
   .txt_box p {
-    font-size: 11px;
+    font-size: 17px;
   }
   .mid_main {
     font-size: 2vw;
@@ -172,7 +181,10 @@
 /* 프로필 메인 flex */
 @media screen and (max-width: 930px) {
   .pro:hover .pro_hov {
-    bottom: 8%;
+    bottom: 0%;
+  }
+  .pro:hover h2 {
+    font-size: 20px;
   }
 
   .wrap {
@@ -224,7 +236,7 @@
     font-size: 18px;
   }
   .fi {
-    height: 900px;
+    height: 750px;
   }
   .typingTxt {
     font-size: 6rem;
@@ -243,7 +255,9 @@
   .hearder_wrap {
     justify-content: space-around;
   }
-
+  .pro {
+    width: 387px;
+  }
   .for > div {
     flex-direction: column;
     width: 100%;
@@ -275,7 +289,7 @@
     height: 69%;
   }
   .txt_box {
-    width: 100%;
+    width: 74%;
     gap: 5%;
     text-align: justify;
     align-items: center;
@@ -305,9 +319,7 @@
   .typingTxt {
     font-size: 5.5rem;
   }
-  .fi {
-    height: 900px;
-  }
+
   nav ul {
     gap: 20px;
   }
@@ -375,6 +387,9 @@
   nav {
     width: 100%;
   }
+  nav ul li a {
+    font-size: 16px;
+  }
   .fi {
     height: 700px;
   }
@@ -413,5 +428,41 @@
   }
   .fiv {
     min-height: 63vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .fi {
+    height: 600px;
+  }
+  .typingTxt {
+    font-size: 3rem;
+  }
+  .pro {
+    background-size: 100%;
+    width: 356px;
+    height: 421px;
+  }
+  .txt_box h2 {
+    font-size: 26px;
+  }
+  .txt_box p {
+    font-size: 17px;
+  }
+
+  .mid_main_hidden {
+    font-size: 18px;
+    text-align: center;
+  }
+  .tree h3 {
+    font-size: 30px;
+  }
+  .mid {
+    height: 120px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .txt_box h2 {
+    font-size: 27px;
   }
 }

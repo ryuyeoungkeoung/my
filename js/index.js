@@ -36,10 +36,7 @@ document.querySelectorAll(".menu-link").forEach((anchor) => {
 
 // 메인
 var typed = new Typed(".typingTxt", {
-  strings: [
-    "<i>Converting innovative</i> ideas.",
-    " into seamless digital experiences.",
-  ],
+  strings: ["<i>Aesthetics</i>.", " Zenith idea."],
   typeSpeed: 80, //타이핑속도
   backSpeed: 30, //백스페이스 속도
   smartBackspace: true,
@@ -61,7 +58,6 @@ ScrollTrigger.matchMedia({
       },
       duration: 1,
     });
-
     gsap.to(".fi", {
       scrollTrigger: {
         trigger: "body",
@@ -72,6 +68,34 @@ ScrollTrigger.matchMedia({
       },
       borderRadius: "100%",
     });
+  },
+  // 1000px 미만일 때
+  "(max-width: 1000px)": function () {
+    gsap.fromTo(
+      ".fi",
+      {
+        // 시작할 때 모습
+        rotate: 0,
+        y: "0",
+        x: "0%",
+        // markers: true,
+      },
+      {
+        // 끝났을 때 모습
+        duration: 5,
+        y: "0",
+        x: "0%",
+        rotation: 0,
+        scrollTrigger: {
+          trigger: ".two",
+          start: "-50% 0%",
+          end: "10% 0%",
+          scrub: 1,
+          // markers: true, // 개발 가이드 선 활성화
+        },
+        borderRadius: "50%",
+      }
+    );
   },
 });
 // 프로플 사진

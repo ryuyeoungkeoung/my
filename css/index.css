@@ -155,7 +155,7 @@ h1 a {
 
 body {
   width: 100%;
-
+  white-break: normal;
   font-family: ‘yangjin’;
   flex-direction: column;
   background-color: #1b1b1d;
@@ -247,7 +247,7 @@ nav ul li a {
 /* 메인 */
 .animation_holder {
   width: 100%;
-  height: 1005px;
+  max-height: 1005px;
   padding: 5px;
   box-sizing: border-box;
 }
