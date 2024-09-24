@@ -559,7 +559,7 @@ nav ul li a {
   padding: 2%;
 }
 .four h4 {
-  font-size: 4vw;
+  font-size: 6vw;
   font-weight: 600;
   color: #fff;
   text-align: center;
@@ -682,15 +682,15 @@ nav ul li a {
 }
 
 .di_2 {
-  top: 24%;
+  top: 20%;
 }
 
 .di_3 {
-  top: 36%;
+  top: 33%;
 }
 
 .di_4 {
-  top: 48%;
+  top: 46%;
 }
 
 /* 텍스트 박스 제목라인 */
@@ -699,14 +699,14 @@ nav ul li a {
   font-weight: 400;
   position: relative;
   height: fit-content;
-  top: -41%;
+  top: -50%;
 }
 .hearder_txt {
   width: 70%;
   height: 15%;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: end; */
 }
 .tit_box {
   display: flex;
@@ -714,9 +714,10 @@ nav ul li a {
 }
 .tit_box p {
   line-height: 30px;
+  font-size: 14px;
 }
 .tit_box h3 {
-  width: fit-content;
+  width: 150%;
   height: 90px;
   font-size: 1.8vw;
   color: #121212;
@@ -724,15 +725,19 @@ nav ul li a {
   margin-bottom: 40px;
 }
 .menu_box {
-  height: 77%;
+  height: fit-content;
 }
 .me_box {
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: start;
   height: 100%;
+  gap: 30px;
   width: 100%;
+}
+.for_txt {
+  height: 100%;
 }
 .me_box li h4 {
   font-size: 25px;
@@ -743,6 +748,10 @@ nav ul li a {
   line-height: 25px;
   color: #4a4a4a;
 }
+.hidden_work2 {
+  display: none;
+}
+
 /* 텍스트 박스 안 이미지 포폴 영역 */
 .pic_box {
   width: 34%;
@@ -778,7 +787,7 @@ nav ul li a {
   box-sizing: border-box;
   font-size: 20px;
   font-weight: 200;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .btn:hover {
   background-color: #121212;
