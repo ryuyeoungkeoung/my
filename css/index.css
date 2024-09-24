@@ -778,6 +778,7 @@ nav ul li a {
   box-sizing: border-box;
   font-size: 20px;
   font-weight: 200;
+  margin-top: 20px;
 }
 .btn:hover {
   background-color: #121212;
