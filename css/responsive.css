@@ -115,7 +115,11 @@
     width: 70%;
   }
 }
+/* 커서 아웃 */
 @media screen and (max-width: 1000px) {
+  .cursorBlob {
+    display: none;
+  }
   .wrap {
     gap: 20px;
   }
@@ -302,7 +306,7 @@
   .di_2,
   .di_3,
   .di_4 {
-    top: 0%;
+    top: -1%;
   }
   .hearder_txt {
     height: 16%;
