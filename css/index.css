@@ -68,6 +68,7 @@
     background-position: 100% 50%;
   }
 }
+
 .wrap {
   display: flex;
   justify-content: center;
@@ -139,6 +140,16 @@
   transform: scaleX(1);
   -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+/* 로고 */
+h1 a {
+  display: block;
+  background-image: url(../img/logo.png);
+  width: 50px;
+  height: 100px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /* 공통영역 */
 
@@ -237,6 +248,8 @@ nav ul li a {
 .animation_holder {
   width: 100%;
   height: 1005px;
+  padding: 5px;
+  box-sizing: border-box;
 }
 .fi {
   height: 1000px;
@@ -264,6 +277,7 @@ nav ul li a {
   line-height: 1;
   margin: 4%;
   text-align: left;
+  padding: 50px 50px;
   margin: 100px 0px;
 }
 
@@ -560,7 +574,10 @@ nav ul li a {
   flex-direction: column;
   gap: 50px;
 }
-
+/* pc에선 숨기기 */
+.hidden_tree_mo {
+  display: none;
+}
 .tree_sub {
   width: 72%;
   gap: 20px;
@@ -621,6 +638,11 @@ nav ul li a {
   margin: 0 auto;
   border-top: 1px dotted #000000;
 }
+/* mob */
+.mid_main_hidden {
+  display: none;
+}
+/* pc */
 .mid_main {
   font-weight: 400;
   font-size: 3vw;
@@ -761,10 +783,13 @@ nav ul li a {
   transition: 0.3s;
 }
 /* 마지막 섹션 */
+.fi_se_wrap {
+  width: 100%;
+  overflow: hidden;
+}
 .fiv {
   width: 100%;
   height: 600px;
-  background-color: #00e5ff;
   font-family: "Heading Now", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;

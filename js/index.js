@@ -151,19 +151,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animateLetters();
 });
-
-// 마지막섹션2 블러처리
-const section = document.querySelector(".fiv"); // .fiv 클래스를 가진 요소 선택
-
-function checkScroll() {
-  const rect = section.getBoundingClientRect(); // 해당 섹션의 위치 가져오기
-
-  if (rect.top < window.innerHeight && rect.bottom > 0) {
-    section.classList.remove("filter"); // 필터 해제
-  } else {
-    section.classList.add("filter"); // 필터 적용
-  }
-}
-
-window.addEventListener("scroll", checkScroll); // 스크롤 시 체크
-window.addEventListener("resize", checkScroll); // 창 크기 변경 시 체크

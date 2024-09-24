@@ -17,6 +17,9 @@
   }
 }
 @media screen and (max-width: 1320px) {
+  .typingTxt {
+    font-size: 8rem;
+  }
   .btn {
     margin-top: 50px;
   }
@@ -29,9 +32,15 @@
   .tree P {
     font-size: 1.5vw;
   }
+  .fi {
+    margin-top: 10%;
+  }
 }
 
 @media screen and (max-width: 1180px) {
+  .typingTxt {
+    margin: 100% 0%;
+  }
   .pro_sub {
     gap: 20px;
   }
@@ -47,15 +56,21 @@
   .me_box li {
     width: 100%;
   }
-  .tree P {
-    font-size: 1.3vw;
+  .mid_main {
+    display: none;
   }
+  .mid_main_hidden {
+    display: block;
+    font-size: 3vw;
+  }
+  .tree P {
+    font-size: 17px;
+  }
+
   .txt_box h2 {
     font-size: 35px;
   }
-  .txt h4 {
-    font-size: 14px;
-  }
+
   .txt a {
     font-size: 14px;
   }
@@ -96,8 +111,8 @@
   .hidden_3d {
     display: none;
   }
-  .txt h4 {
-    font-size: 12px;
+  .txt_box {
+    width: 70%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -113,6 +128,45 @@
   }
   .mid_main {
     font-size: 2vw;
+  }
+  .hidden_tree_pc {
+    display: none;
+  }
+  .hidden_tree_mo {
+    display: block;
+  }
+  .tree h3 {
+    font-size: 50px;
+  }
+  .tree P {
+    font-size: 20px;
+  }
+  .hidden_work {
+    display: none;
+  }
+  .hidden_work2 {
+    display: block;
+  }
+  .me_box li p {
+    font-size: 17px;
+  }
+  .tit_box h3 {
+    font-size: 27px;
+  }
+  .di_1 {
+    top: 9%;
+  }
+  .di_2 {
+    top: 21%;
+  }
+  .di_3 {
+    top: 33%;
+  }
+  .di_4 {
+    top: 45%;
+  }
+  .btn {
+    margin-top: 20px;
   }
 }
 /* 프로필 메인 flex */
@@ -139,7 +193,11 @@
 }
 @media screen and (max-width: 910px) {
   .me_box li p {
-    font-size: 13px;
+    font-size: 15px;
+  }
+  .tit_box h3 {
+    font-size: 33px;
+    margin-bottom: 0px;
   }
   .btn {
     font-size: 15px;
@@ -151,12 +209,6 @@
   .me_box li {
     width: 110%;
   }
-  .tree P {
-    font-size: 1.4vw;
-  }
-  .tree h3 {
-    font-size: 4.5vw;
-  }
 }
 @media screen and (max-width: 870px) {
   .txt_box h2 {
@@ -166,19 +218,16 @@
     font-size: 13px;
   }
   .txt a {
-    font-size: 12px;
+    font-size: 15px;
   }
   nav ul li a {
     font-size: 18px;
   }
+  .fi {
+    height: 900px;
+  }
   .typingTxt {
-    font-size: 8rem;
-  }
-  .tree P {
-    font-size: 1.5vw;
-  }
-  .tree h3 {
-    font-size: 4vw;
+    font-size: 6rem;
   }
   .hidden_js,
   .hidden_pdf {
@@ -186,19 +235,11 @@
   }
 }
 
-@media screen and (max-width: 750px) {
-  .typingTxt {
-    font-size: 7rem;
-  }
-  .tree P {
-    font-size: 2vw;
-  }
-  .tree h3 {
-    font-size: 5vw;
-  }
-}
 /* work 모바일형 */
 @media screen and (max-width: 700px) {
+  .typingTxt {
+    font-size: 5rem;
+  }
   .hearder_wrap {
     justify-content: space-around;
   }
@@ -233,6 +274,16 @@
   .menu_box {
     height: 69%;
   }
+  .txt_box {
+    width: 100%;
+    gap: 5%;
+    text-align: justify;
+    align-items: center;
+  }
+
+  .txt_box p {
+    font-size: 15px;
+  }
   /* 위치조정 */
   .di_2,
   .di_3,
@@ -242,6 +293,12 @@
   .hearder_txt {
     height: 16%;
     margin-top: 27px;
+  }
+  .tree h3 {
+    font-size: 43px;
+  }
+  .tree P {
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 650px) {
@@ -289,15 +346,11 @@
   .sub {
     font-size: 15px;
   }
-  .txt h4 {
-    font-size: 14px;
-  }
+
   .typingTxt {
     font-size: 6rem;
   }
-  .tree h3 {
-    line-height: 36px;
-  }
+
   .ph_copy h4 {
     font-size: 13px;
   }
@@ -335,7 +388,7 @@
     font-size: 18px;
   }
   .txt_box h2 {
-    font-size: 32px;
+    font-size: 31px;
     text-align: center;
   }
   .txt_box p {
@@ -351,12 +404,7 @@
   .skill_wrap > div {
     width: 90%;
   }
-  .tree P {
-    font-size: 16px;
-  }
-  .tree h3 {
-    font-size: 5.5vw;
-  }
+
   .for > div {
     padding: 100px 0px;
   }
