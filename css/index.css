@@ -157,16 +157,17 @@ h1 a {
 
 body {
   width: 100%;
-  white-break: normal;
+  white-space: normal;
   font-family: ‘yangjin’;
-  flex-direction: column;
   background-color: #1b1b1d;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
   padding: 1rem;
   box-sizing: border-box;
-  overflow-x: hidden;
+  padding-bottom: 0rem;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/texture.svg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body:after {
@@ -207,11 +208,11 @@ header {
   position: fixed;
   z-index: 999;
   top: 0;
+  left: 0;
 }
 .hearder_wrap {
   width: 90%;
   height: 100%;
-
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -224,7 +225,6 @@ header {
 }
 nav {
   width: 50%;
-
   height: 100%;
 }
 nav ul {
@@ -400,29 +400,22 @@ nav ul li a {
 /* 세번째 섹션 스킬트리*/
 .skill {
   width: 100%;
+  margin: 50px auto;
   height: 15%;
   display: flex;
   align-items: center;
   background-color: #121212;
-  padding: 100px 0px;
 }
 .skill_wrap {
-  width: 90%;
+  width: 100%;
   position: relative;
   height: 100%;
-  margin: 0 auto;
 }
 .skill_wrap > div {
-  /* display: inline-block; */
-  position: absolute;
-  top: 30%;
-  left: 60%;
   width: 57%;
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .skill_wrap > div > a {
@@ -434,7 +427,7 @@ nav ul li a {
   font-family: fontawesome;
   position: relative;
   display: inline-block;
-  width: 150px;
+  width: 25%;
   height: 83px;
   padding-top: 28px;
   margin: 0 2px;
@@ -452,13 +445,15 @@ nav ul li a {
 /* pop-up text */
 
 .skill_wrap > div > a span {
+  width: 100%;
   color: #666;
   position: absolute;
   font-family: sans-serif;
   bottom: 0;
-  left: -25px;
+  left: 0;
   right: -25px;
   padding: 5px 7px;
+  box-sizing: border-box;
   z-index: -1;
   font-size: 14px;
   border-radius: 2px;
@@ -491,9 +486,10 @@ nav ul li a {
 /* text pops up when icon is in hover state */
 
 .skill_wrap > div > a:hover span {
-  bottom: 120px;
+  bottom: 100px;
   visibility: visible;
   opacity: 1;
+  z-index: 5;
 }
 
 /* font awesome icons */
@@ -634,6 +630,7 @@ nav ul li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
 }
 .main_txt {
   width: 95;
@@ -663,7 +660,7 @@ nav ul li a {
   height: 19%;
   margin: 0 auto;
   display: flex;
-  left: 2%;
+  /* left: 2%; */
   align-items: center;
   border-top: 1px dotted #000000;
   justify-content: space-around;
@@ -682,15 +679,15 @@ nav ul li a {
 }
 
 .di_2 {
-  top: 20%;
+  top: 19%;
 }
 
 .di_3 {
-  top: 33%;
+  top: 31%;
 }
 
 .di_4 {
-  top: 46%;
+  top: 43%;
 }
 
 /* 텍스트 박스 제목라인 */
@@ -717,12 +714,12 @@ nav ul li a {
   font-size: 14px;
 }
 .tit_box h3 {
-  width: 150%;
   height: 90px;
   font-size: 1.8vw;
   color: #121212;
   font-weight: 600;
   margin-bottom: 40px;
+  width: 500px;
 }
 .menu_box {
   height: fit-content;
