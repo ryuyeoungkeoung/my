@@ -446,6 +446,12 @@
     padding: 100px 0px;
     height: 24%;
     margin-bottom: 100px;
+    justify-content: center;
+  }
+  .pic_img1 {
+    min-width: 300px;
+    order: -1;
+    max-height: 200px;
   }
   .di_1,
   .di_2,

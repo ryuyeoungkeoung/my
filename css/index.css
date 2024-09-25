@@ -422,7 +422,7 @@ nav ul li a {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
 }
 
 .skill_wrap > div > a {
