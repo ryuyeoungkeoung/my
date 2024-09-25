@@ -20,6 +20,26 @@
 }
 @import url("https://fonts.googleapis.com/css?family=Black+Han+Sans:400");
 
+/* 스크롤 */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(43, 43, 43);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 46, 210);
+}
+
+/*  */
 /* 커서 */
 #cursorBlob {
   width: 50px;
@@ -168,6 +188,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 body:after {
@@ -301,7 +322,7 @@ nav ul li a {
   align-items: center;
   /* gap: ; */
 }
-.pro {
+.pro_hov1 {
   width: 446px;
   height: 625px;
   position: relative;
@@ -310,14 +331,14 @@ nav ul li a {
   background-repeat: no-repeat;
   background-size: 76%;
 }
-.pro:hover {
+.pro_hov1:hover {
   transform: scale(1);
   transition: 0.3s;
 }
-.pro:hover .pro_hov {
+.pro_hov1:hover .name_birth_info {
   display: block;
 }
-.pro:hover .pro_hov {
+.pro_hov1:hover .name_birth_info {
   display: none;
   position: absolute;
   bottom: 11%;
@@ -330,11 +351,11 @@ nav ul li a {
   justify-content: space-evenly;
   transition: 0.3s;
 }
-.pro h2 {
+.pro_hov1 h2 {
   display: none;
 }
 
-.pro:hover h2 {
+.pro_hov1:hover h2 {
   transition: 0.3s;
   display: block;
   font-size: 1vw;
@@ -679,15 +700,15 @@ nav ul li a {
 }
 
 .di_2 {
-  top: 19%;
+  top: 19.5%;
 }
 
 .di_3 {
-  top: 31%;
+  top: 31.5%;
 }
 
 .di_4 {
-  top: 43%;
+  top: 43.5%;
 }
 
 /* 텍스트 박스 제목라인 */
@@ -701,9 +722,6 @@ nav ul li a {
 .hearder_txt {
   width: 70%;
   height: 15%;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: end; */
 }
 .tit_box {
   display: flex;

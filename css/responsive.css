@@ -12,10 +12,10 @@
 }
 
 @media screen and (max-width: 1360px) {
-  .pro:hover .pro_hov {
+  .pro_hov1:hover .name_birth_info {
     bottom: 14%;
   }
-  .pro:hover h2 {
+  .pro_hov1:hover h2 {
     font-size: 16px;
   }
 }
@@ -47,7 +47,7 @@
   .pro_sub {
     gap: 40px;
   }
-  .pro {
+  .pro_hov1 {
     background-size: 83%;
   }
   .tit_box p {
@@ -93,7 +93,7 @@
 }
 
 @media screen and (max-width: 1090px) {
-  .pro:hover h2 {
+  .pro_hov1:hover h2 {
     font-size: 15px;
   }
   .skill_wrap > div {
@@ -122,21 +122,22 @@
     width: 70%;
   }
 }
-/* 커서 아웃 */
+
 @media screen and (max-width: 1000px) {
-  .cursorBlob {
+  /* 커서 아웃 */
+  #cursorBlob {
     display: none;
   }
   .wrap {
     gap: 20px;
   }
-  .pro {
+  .pro_hov1 {
     background-size: 100%;
   }
-  .pro:hover h2 {
+  .pro_hov1:hover h2 {
     font-size: 1.5vw;
   }
-  .pro:hover .pro_hov {
+  .pro_hov1:hover .name_birth_info {
     bottom: 12%;
   }
 
@@ -194,10 +195,10 @@
 }
 /* 프로필 메인 flex */
 @media screen and (max-width: 930px) {
-  .pro:hover .pro_hov {
+  .pro_hov1:hover .name_birth_info {
     bottom: 0%;
   }
-  .pro:hover h2 {
+  .pro_hov1:hover h2 {
     font-size: 20px;
   }
 
@@ -263,12 +264,17 @@
 
 /* work 모바일형 */
 @media screen and (max-width: 700px) {
+  /* header {
+    padding: 20px;
+    box-sizing: border-box;
+  } */
   .hearder_wrap {
     justify-content: space-around;
     flex-direction: column;
   }
   h1 a {
-    height: 60px;
+    height: 46px;
+    background-size: 77%;
   }
   nav {
     width: 100%;
@@ -279,10 +285,10 @@
   .hearder_wrap {
     justify-content: space-around;
   }
-  .pro {
+  .pro_hov1 {
     width: 387px;
   }
-  .pro:hover .pro_hov {
+  .pro_hov1:hover .name_birth_info {
     bottom: 6%;
   }
   .for > div {
@@ -312,6 +318,7 @@
   .me_box {
     margin-top: 0%;
     gap: 0px;
+    height: fit-content;
   }
   .di_1 {
     z-index: 1;
@@ -346,7 +353,7 @@
   }
 
   .menu_box {
-    height: 69%;
+    height: fit-content;
   }
   .txt_box {
     width: 74%;
@@ -386,7 +393,7 @@
   .wrap {
     width: 100%;
   }
-  .pro:hover h2 {
+  .pro_hov1:hover h2 {
     font-size: 18px;
   }
   .txt_box {
@@ -491,7 +498,7 @@
     width: 100%;
   }
   .for > div {
-    padding: 100px 0px;
+    padding: 0px;
     height: 24%;
     margin-bottom: 100px;
     justify-content: center;
@@ -509,7 +516,7 @@
   .di_2,
   .di_3,
   .di_4 {
-    top: 0%;
+    top: -3%;
   }
   .btn {
     margin-top: 20px;
@@ -526,7 +533,7 @@
   .typingTxt {
     font-size: 3rem;
   }
-  .pro {
+  .pro_hov1 {
     background-size: 100%;
     width: 229px;
     height: 315px;
@@ -541,7 +548,7 @@
   }
 
   .mid_main_hidden {
-    font-size: 18px;
+    font-size: 13px;
     text-align: center;
   }
   .tree h3 {

@@ -103,7 +103,7 @@ gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.matchMedia({
   // 1000px 이상일 때
   "(min-width: 1000px)": function () {
-    gsap.from(".pro", {
+    gsap.from(".pro_hov1", {
       scrollTrigger: {
         duration: 100,
         trigger: ".two",
@@ -117,7 +117,7 @@ ScrollTrigger.matchMedia({
       y: "0",
       x: "-50%",
     });
-    gsap.to(".pro", {
+    gsap.to(".pro_hov1", {
       scrollTrigger: {
         trigger: ".two",
         opacity: 1,
