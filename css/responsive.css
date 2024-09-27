@@ -109,7 +109,7 @@
   .tit_box h3 {
     height: fit-content;
   }
-  .hearder_txt {
+  .header_txt {
     height: 3%;
   }
   .tit_box p {
@@ -268,7 +268,7 @@
     padding: 20px;
     box-sizing: border-box;
   } */
-  .hearder_wrap {
+  .header_wrap {
     justify-content: space-around;
     flex-direction: column;
   }
@@ -282,7 +282,7 @@
   .typingTxt {
     font-size: 5rem;
   }
-  .hearder_wrap {
+  .header_wrap {
     justify-content: space-around;
   }
   .pro_hov1 {
@@ -348,7 +348,7 @@
   .pic_img4 {
     order: -1;
   }
-  .hearder_txt {
+  .header_txt {
     height: 16%;
   }
 
@@ -366,7 +366,7 @@
     font-size: 15px;
   }
 
-  .hearder_txt {
+  .header_txt {
     height: 16%;
     margin-top: 27px;
   }
@@ -454,7 +454,7 @@
   main {
     width: 100%;
   }
-  .hearder_wrap {
+  .header_wrap {
     justify-content: center;
   }
   nav {
