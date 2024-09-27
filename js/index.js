@@ -22,14 +22,14 @@ const blobCursor = (() => {
 // 메뉴 클릭시 섹션 이동
 document.querySelectorAll(".menu-link").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    e.preventDefault(); // 기본 링크 클릭 동작 방지
+    e.preventDefault();
 
-    const targetClass = this.getAttribute("href"); // 클릭한 링크의 href 속성 가져오기
-    const targetElement = document.querySelector(targetClass); // 해당 섹션 요소 선택
+    const targetClass = this.getAttribute("href");
+    const targetElement = document.querySelector(targetClass);
 
     targetElement.scrollIntoView({
-      behavior: "smooth", // 부드러운 스크롤 효과
-      block: "start", // 섹션의 시작 부분으로 정렬
+      behavior: "smooth",
+      block: "start",
     });
   });
 });
@@ -37,11 +37,11 @@ document.querySelectorAll(".menu-link").forEach((anchor) => {
 // 메인
 var typed = new Typed(".typingTxt", {
   strings: ["<i>Aesthetics</i>.", " Zenith idea."],
-  typeSpeed: 80, //타이핑속도
-  backSpeed: 30, //백스페이스 속도
+  typeSpeed: 80,
+  backSpeed: 30,
   smartBackspace: true,
-  cursorChar: "|", //커서모양
-  backDelay: 1000, //백스페이스 문자 지우기 전에 딜레이
+  cursorChar: "|",
+  backDelay: 1000,
 });
 
 // 메인
@@ -91,7 +91,7 @@ ScrollTrigger.matchMedia({
           start: "-50% 0%",
           end: "10% 0%",
           scrub: 1,
-          // markers: true, // 개발 가이드 선 활성화
+          // markers: true,
         },
         borderRadius: "50%",
       }
@@ -137,13 +137,13 @@ document.addEventListener("DOMContentLoaded", () => {
   text.split("").forEach((char) => {
     const span = document.createElement("span");
     span.className = "letter";
-    span.innerHTML = char === " " ? "&nbsp;" : char; // Use &nbsp; for spaces
+    span.innerHTML = char === " " ? "&nbsp;" : char;
     container.appendChild(span);
   });
 
   const letters = document.querySelectorAll(".letter");
   const totalLetters = letters.length;
-  const delayIncrement = 100; // Delay in milliseconds
+  const delayIncrement = 100;
 
   function easeInOutQuart(t) {
     return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * --t * t * t * t;
@@ -151,8 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function animateLetters(forward = true) {
     letters.forEach((letter, index) => {
-      // const delay = Math.max(index, totalLetters - index) * delayIncrement;
-
       const normalizedIndex =
         Math.max(index, totalLetters - 1 - index) / (totalLetters - 1);
       const easedDelay = easeInOutQuart(normalizedIndex);
@@ -166,7 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
           "--letter-spacing",
           forward ? "0.05em" : "0em"
         );
-        // letter.style.setProperty("--font-size", forward ? '12vw' : '10vw');
       }, delay);
     });
 

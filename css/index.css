@@ -39,7 +39,6 @@
   background: rgb(255, 46, 210);
 }
 
-/*  */
 /* 커서 */
 #cursorBlob {
   width: 50px;
@@ -172,7 +171,6 @@ h1 a {
   background-position: center;
 }
 /* 스크롤 */
-
 /* 공통영역 */
 
 body {
@@ -320,7 +318,6 @@ nav ul li a {
   margin: 0 auto;
   justify-content: space-around;
   align-items: center;
-  /* gap: ; */
 }
 .pro_hov1 {
   width: 446px;
@@ -360,8 +357,6 @@ nav ul li a {
   display: block;
   font-size: 1vw;
   color: #ffffff;
-
-  /* text-align: center; */
   font-weight: 500;
 }
 .txt_box {
@@ -463,8 +458,6 @@ nav ul li a {
   background: #808080;
 }
 
-/* pop-up text */
-
 .skill_wrap > div > a span {
   width: 100%;
   color: #666;
@@ -490,8 +483,6 @@ nav ul li a {
   filter: contrast(4);
 }
 
-/* pop-up text arrow */
-
 .skill_wrap > div > a span:before {
   content: "";
   width: 0;
@@ -504,16 +495,12 @@ nav ul li a {
   left: 40px;
 }
 
-/* text pops up when icon is in hover state */
-
 .skill_wrap > div > a:hover span {
   bottom: 100px;
   visibility: visible;
   opacity: 1;
   z-index: 5;
 }
-
-/* font awesome icons */
 
 .skill_wrap > div > a:nth-of-type(1):before {
   background-image: url(../img/hugeicons_github.png);
@@ -611,7 +598,7 @@ nav ul li a {
   justify-content: space-around;
   background-color: #99999922;
   border: 1px solid #fff;
-  /* display: none; */
+
   box-shadow: 3px 3px 0 3px #ffffff;
   transition: 0.3s;
 }
@@ -681,7 +668,6 @@ nav ul li a {
   height: 19%;
   margin: 0 auto;
   display: flex;
-  /* left: 2%; */
   align-items: center;
   border-top: 1px dotted #000000;
   justify-content: space-around;
