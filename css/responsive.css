@@ -1,9 +1,9 @@
 @charset "utf-8";
 @media screen and (max-width: 1615px) {
-  .di_2 {
+  .project2 {
     top: 22%;
   }
-  .di_3 {
+  .project3 {
     top: 35%;
   }
   .for div > h2 {
@@ -53,7 +53,7 @@
   .tit_box p {
     font-size: 12px;
   }
-  .di_2 {
+  .project2 {
     top: 17%;
   }
   .me_box li {
@@ -84,10 +84,10 @@
     line-height: 36px;
     font-size: 17px;
   }
-  .di_3 {
+  .project3 {
     top: 28%;
   }
-  .di_4 {
+  .project4 {
     top: 39%;
   }
 }
@@ -181,10 +181,10 @@
   .for div > h2 {
     display: none;
   }
-  .di_1,
-  .di_2,
-  .di_3,
-  .di_4 {
+  .project1,
+  .project2,
+  .project3,
+  .project4 {
     top: 9%;
   }
 
@@ -320,16 +320,16 @@
     gap: 0px;
     height: fit-content;
   }
-  .di_1 {
+  .project1 {
     z-index: 1;
   }
-  .di_2 {
+  .project2 {
     z-index: 2;
   }
-  .di_3 {
+  .project3 {
     z-index: 3;
   }
-  .di_4 {
+  .project4 {
     z-index: 4;
   }
   .pic_box {
@@ -512,10 +512,10 @@
     padding: 10px;
     box-sizing: border-box;
   }
-  .di_1,
-  .di_2,
-  .di_3,
-  .di_4 {
+  .project1,
+  .project2,
+  .project3,
+  .project4 {
     top: -3%;
   }
   .btn {
